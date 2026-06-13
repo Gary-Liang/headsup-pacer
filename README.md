@@ -1,5 +1,8 @@
 # HeadsUp Pacer — core engine
 
+[![CI](https://github.com/Gary-Liang/headsup-pacer/actions/workflows/ci.yml/badge.svg)](https://github.com/Gary-Liang/headsup-pacer/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+
 > Run head-up. Your pace interrupts you — you never check it.
 
 An interrupt-only pacing companion for runners on smart glasses. The display is
@@ -14,11 +17,14 @@ later Meta DAT / Android XR). The product design is in [`DESIGN.md`](./DESIGN.md
 
 ## Demo
 
-`npm run replay` runs a full simulated 8:00/mi run through the engine and prints
-the cue timeline — every cue the runner would see/hear, and the display-on-time
-budget. Note how the on-pace opening fires nothing (dark by default), drift cues
-only fire after they're *sustained*, and total display-on stays well under the
-2 min/hr target:
+A simulated 8:00/mi run through the engine — pace vs. the target band, with a
+marker wherever a cue fired. The data is pure engine output (`npm run chart`):
+
+![Pace vs. band over a simulated run](./docs/replay-chart.svg)
+
+Note the on-pace opening sits inside the band and fires nothing (dark by
+default); cues only fire once drift is *sustained*. `npm run replay` prints the
+same run as a cue timeline with the display-on-time budget:
 
 ```
 HeadsUp Pacer — replay

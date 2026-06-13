@@ -9,6 +9,7 @@
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
     "replay": "tsx src/replay.ts",
+    "chart": "tsx scripts/render-chart.ts",
     "sync:lens": "node scripts/sync-lens.mjs"
   },
   "devDependencies": {

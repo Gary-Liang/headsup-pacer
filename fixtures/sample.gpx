@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="HeadsUp Pacer test fixture" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk>
+    <name>short tempo segment</name>
+    <trkseg>
+      <trkpt lat="37.386100" lon="-122.083900"><time>2026-06-12T14:00:00Z</time></trkpt>
+      <trkpt lat="37.386100" lon="-122.083862"><time>2026-06-12T14:00:01Z</time></trkpt>
+      <trkpt lat="37.386100" lon="-122.083824"><time>2026-06-12T14:00:02Z</time></trkpt>
+      <trkpt lat="37.386100" lon="-122.083786"><time>2026-06-12T14:00:03Z</time></trkpt>
+      <trkpt lat="37.386100" lon="-122.083748"><time>2026-06-12T14:00:04Z</time></trkpt>
+      <trkpt lat="37.386100" lon="-122.083710"><time>2026-06-12T14:00:05Z</time></trkpt>
+    </trkseg>
+  </trk>
+</gpx>

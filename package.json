@@ -1,0 +1,20 @@
+{
+  "name": "headsup-pacer",
+  "version": "0.1.0",
+  "description": "Interrupt-only pacing core for a heads-up running companion. Platform-agnostic, unit-testable TypeScript.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "replay": "tsx src/replay.ts",
+    "sync:lens": "node scripts/sync-lens.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.1.0"
+  }
+}

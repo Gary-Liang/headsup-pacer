@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+
+# Generated: synced copy of src/ for the Lens project (see scripts/sync-lens.mjs)
+lens/PacerCore/
+
+# Private internal strategy memo — kept OUT of git history on purpose.
+# The public technical story lives in DESIGN.md instead.
+headsup-pacer-spec.md

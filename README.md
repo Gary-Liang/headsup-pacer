@@ -12,6 +12,35 @@ session state machine — with no Lens Studio / Spectacles dependencies, so it
 runs in plain Node for tests and unchanged inside the Spectacles JS runtime (and
 later Meta DAT / Android XR). The product design is in [`DESIGN.md`](./DESIGN.md).
 
+## Demo
+
+`npm run replay` runs a full simulated 8:00/mi run through the engine and prints
+the cue timeline — every cue the runner would see/hear, and the display-on-time
+budget. Note how the on-pace opening fires nothing (dark by default), drift cues
+only fire after they're *sustained*, and total display-on stays well under the
+2 min/hr target:
+
+```
+HeadsUp Pacer — replay
+Band: 8:00/mi ± 10s   Fixes: 550
+────────────────────────────────────────────────────────
+[2:24] 🔥 HOT  +24s/mi  (7:36/mi)  "ease off"
+[3:28] ✅ back in band
+[5:18] 🐢 SLOW -37s/mi  (8:37/mi)  "pick it up"
+[7:04] ✅ back in band
+[7:59] 📍 Mile 1 — 7:58 (cum 7:58)
+[8:45] 🐢 SLOW -364s/mi  (14:04/mi)  "pick it up"
+[8:53] ⏸  pause? (stopped)
+────────────────────────────────────────────────────────
+Distance:   1.09 mi
+Moving:     9:09
+Avg pace:   49:58/mi
+Proj 5K:    1:50:08
+Cues:       7  (~0:11 display-on, ~1:09/hr — budget <2:00/hr)
+```
+
+Point it at a real recording with `npm run replay -- yourrun.gpx`.
+
 ## What's implemented
 
 The `$0`, no-hardware slice of the build sequence (spec §9, weekends 1–2 — the
